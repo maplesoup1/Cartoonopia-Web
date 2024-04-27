@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>COMP5347 Assignment One</title>
+   <link rel="stylesheet" href="index.css" />
+   <!-- We are deferring the script being loaded because we need the full html document to be loaded first -->
+</head>
+<body>
+   <div class="background-image-blur-whitewash"></div>
+   <div class="page-title">
+      <h1>Cartoonopia</h1>
+      <p>The home of characters and cartoons!</p>
+  </div>
+<div class="main-container">
+   <div id="search-container">
+      <form id="search-form" action="javascript:void(0);">
+         <input id="search-input" type="text" placeholder="Search for a character">
+     </form>
+   </div>
+   <div class="filters-table-container">
+      <div id="filters-container">
+            <legend>Filters</legend>
+            <div class="slider-container">
+                <h2>Strength</h2>
+                <output id="strength-min-output" class = "value-output">0</output>
+                <input type="range" id="strength-min" name="strength-min" min="0" max="100" value="0">
+                <output id="strength-max-output" class = "value-output">100</output>
+                <input type="range" id="strength-max" name="strength-max" min="0" max="100" value="100">
+            </div>
+            <div class="slider-container">
+                <h2>Speed</h2>
+                <output id="speed-min-output" class = "value-output">0</output>
+                <input type="range" id="speed-min" name="speed-min" min="0" max="100" value="0">
+                <output id="speed-max-output" class = "value-output">100</output>
+                <input type="range" id="speed-max" name="speed-max" min="0" max="100" value="100">
+            </div>
+            <div class="slider-container">
+                <h2>Skill</h2>
+                <output id="skill-min-output" class = "value-output">0</output>
+                <input type="range" id="skill-min" name="skill-min" min="0" max="100" value="0">
+                <output id="skill-max-output" class = "value-output">100</output>
+                <input type="range" id="skill-max" name="skill-max" min="0" max="100" value="100">
+            </div>
+        
+            <div class="slider-container">
+                <h2>Fear Factor</h2>
+                <output id="fearFactor-min-output" class = "value-output">0</output>
+                <input type="range" id="fearFactor-min" name="fearFactor-min" min="0" max="100" value="0">
+                <output id="fearFactor-max-output" class = "value-output">100</output>
+                <input type="range" id="fearFactor-max" name="fearFactor-max" min="0" max="100" value="100">
+            </div>
+        
+            <div class="slider-container">
+                <h2>Power</h2>
+                <output id="power-min-output" class = "value-output">0</output>
+                <input type="range" id="power-min" name="power-min" min="0" max="100" value="0">
+                <output id="power-max-output" class = "value-output">100</output>
+                <input type="range" id="power-max" name="power-max" min="0" max="100" value="100">
+            </div>
+        
+            <div class="slider-container">
+                <h2>Intelligence</h2>
+                <output id="intelligence-min-output" class = "value-output">0</output>
+                <input type="range" id="intelligence-min" name="intelligence-min" min="0" max="100" value="0">
+                <output id="intelligence-max-output" class = "value-output">100</output>
+                <input type="range" id="intelligence-max" name="intelligence-max" min="0" max="100" value="100">
+            </div>
+            <div class="slider-container">
+                <h2>Wealth</h2>
+                <output id="wealth-min-output" class = "value-output">0</output>
+                <input type="range" id="wealth-min" name="wealth-min" min="0" max="100" value="0">
+                <output id="wealth-max-output" class = "value-output">100</output>
+                <input type="range" id="wealth-max" name="wealth-max" min="0" max="100" value="100">
+            </div>
+      </div>
+      <div class="character-table-container">
+          <table id="character-table">
+              <tr>
+                  <th>Name</th>
+                  <th>Strength</th>
+                  <th>Speed</th>
+                  <th>Skill</th>
+                  <th>Fear Factor</th>
+                  <th>Power</th>
+                  <th>Intelligence</th>
+                  <th>Wealth</th>
+                  <th>Selected</th>
+              </tr>
+              <!-- insert a row for each character here using javascript-->
+          </table>
+      </div>
+      <div id="previous-comparisons-container">
+         <h2>Previous Comparisons</h2>
+         <div id="comparisons-list" class="comparisons-list">
+         </div>
+     </div>
+   </div>
+   <div id="comparison-container">
+    <div id="character-info-container" class="character-info-section">
+        <div id="character1-info" class="character-info">
+            <div class="character-name" id="name-container1">
+                <h3></h3>
+            </div>
+            <img id="character1-photo" class="character-photo">  
+        </div>
+        <div class="vs-container">VS</div>
+        <div id="character2-info" class="character-info">
+            <div class="character-name" id="name-container2">
+                <h3></h3>
+            </div>
+            <img id="character2-photo" class="character-photo">
+            <div id="character2-placeholder"></div>
+        </div>
+    </div>
+    <!-- Attributes Comparison Section -->
+    <div id="attributes-comparison-container" class="attributes-comparison-section">
+        <div class="character-attributes" id="attributes-container1"></div>
+        <div class="character-attributes" id="attributes-container3"></div>
+        <div class="character-attributes" id="attributes-container2"></div>
+    </div>
+  </div>
+   <script defer type="text/javascript" src="index.js"></script> 
+</body>
+</html>
+
+
+
